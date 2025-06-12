@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azzam | Data Analyst Portfolio</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <!-- Animate On Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0f172a',
+            neonPink: '#ff006e',
+            redOrange: '#fb5607',
+            slateDark: '#1e293b',
+            calmTeal: '#16a085',
+            softOrange: '#f39c12',
+            lightBlueGray: '#e9f0f3',
+            limeGreen: '#4ade80',
+            skyBlue: '#22d3ee',
+            coralRed: '#f87171',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-bg {
+      background: radial-gradient(ellipse at 60% 40%, #ff006e22 0%, transparent 60%),
+                  radial-gradient(ellipse at 30% 70%, #fb560722 0%, transparent 70%),
+                  linear-gradient(120deg, #0f172a 0%, #1e293b 100%);
+    }
+    .glass {
+      background: rgba(255,255,255,0.10);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 32px 0 rgba(16,24,40,0.18);
+    }
+    /* Reduced card height for projects and insights */
+    .card-short {
+      min-height: 180px;
+      height: 210px;
+    }
+    .testimonial-card {
+      min-height: 160px;
+      height: 180px;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 900px) {
+      .card-short {
+        min-height: 120px;
+        height: auto;
+      }
+      .testimonial-card {
+        min-height: 120px;
+        height: auto;
+      }
+    }
+    .header-bar {
+      min-height: 68px;
+      height: 68px;
+      background: linear-gradient(90deg, #0f172a 80%, #ff006e22 100%);
+      box-shadow: 0 4px 32px 0 #ff006e22, 0 1.5px 8px 0 #1e293b;
+      border-bottom: 1.5px solid #ff006e33;
+      backdrop-filter: blur(8px);
+      transition: box-shadow 0.3s;
+    }
+    .header-bar:hover {
+      box-shadow: 0 8px 48px 0 #ff006e55, 0 2px 16px 0 #1e293b;
+    }
+    .footer-bg {
+      background: linear-gradient(90deg, #0f172a 60%, #1e293b 100%);
+    }
+    .site-margins {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    @media (max-width: 700px) {
+      .site-margins {
+        margin-top: 80px;
+        margin-bottom: 60px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-navy text-slate-100 font-poppins min-h-screen">
+
+  <!-- Navbar/Header -->
+  <nav class="header-bar fixed top-0 left-0 w-full z-50 glass flex items-center justify-center px-6 transition">
+    <div class="w-full max-w-6xl flex items-center justify-between">
+      <span class="flex items-center gap-2 text-neonPink font-bold text-lg tracking-wide">
+        <i class="fas fa-dna animate-spin-slow"></i>
+        Azzam
+      </span>
+      <ul class="flex gap-4 md:gap-8 uppercase tracking-widest font-semibold text-white text-xs md:text-sm">
+        <li><a href="#hero" class="hover:text-neonPink transition">Home</a></li>
+        <li><a href="#about" class="hover:text-neonPink transition">About</a></li>
+        <li><a href="#projects" class="hover:text-neonPink transition">Projects</a></li>
+        <li><a href="#insights" class="hover:text-neonPink transition">Insights</a></li>
+        <li><a href="#recommendations" class="hover:text-neonPink transition">Testimonials</a></li>
+        <li><a href="#contact" class="hover:text-neonPink transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="site-margins">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg relative flex flex-col justify-center items-center min-h-[30vh] max-w-2xl mx-auto rounded-2xl shadow-2xl px-8 py-10 mt-10 mb-16">
+      <div class="relative z-10 flex flex-col items-center w-full">
+        <h1 class="text-2xl md:text-4xl font-semibold text-white mb-2 text-center w-full">Empowering Healthcare & Education with Data</h1>
+        <p class="text-slate-300 mb-6 text-center w-full">Turning complex data into actionable insights for a healthier, smarter Africa.</p>
+        <div class="flex gap-4 justify-center w-full">
+          <a href="#projects" class="bg-gradient-to-r from-neonPink to-redOrange text-white font-bold py-2 px-5 rounded-full shadow-lg hover:scale-105 transition text-sm">View Projects</a>
+          <a href="#contact" class="border border-neonPink text-neonPink font-bold py-2 px-5 rounded-full hover:bg-neonPink hover:text-white transition text-sm">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="relative max-w-2xl mx-auto glass rounded-2xl p-12 mt-16 mb-20 flex flex-col items-center shadow-2xl" data-aos="fade-up">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Azzam" class="rounded-full w-36 h-36 object-cover shadow-lg hover:scale-105 transition mb-6"/>
+      <h2 class="text-2xl font-semibold text-neonPink mb-2 self-start">About Me</h2>
+      <p class="mb-6 text-slate-200 text-lg text-left w-full">I’m a passionate data analyst focused on using AI for healthcare, education, and peace in Africa. I believe in data for good and strive to make a positive impact through technology.</p>
+      <div class="flex flex-wrap gap-3 w-full">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-neonPink text-white text-sm"><i class="fab fa-python mr-2"></i>Python</span>
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-redOrange text-white text-sm"><i class="fas fa-table mr-2"></i>Pandas</span>
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-slateDark text-white text-sm"><i class="fas fa-database mr-2"></i>SQL</span>
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-calmTeal text-white text-sm"><i class="fas fa-robot mr-2"></i>Machine Learning</span>
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-neonPink text-white text-sm"><i class="fas fa-chart-pie mr-2"></i>Data Viz</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="max-w-6xl mx-auto px-4 mb-24" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold text-white mb-8">Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="bg-slateDark p-6 rounded-xl shadow-lg hover:shadow-neonPink/50 hover:-translate-y-1 transition flex flex-col card-short">
+          <h3 class="text-xl text-white font-semibold flex items-center mb-2"><i class="fas fa-user-md mr-2 text-neonPink"></i>Healthcare Dashboard</h3>
+          <p class="text-slate-300 mb-4">A dashboard for visualizing hospital metrics and patient outcomes. <span class="italic text-slate-400">[Add your project details here]</span></p>
+          <div class="mt-auto">
+            <span class="bg-neonPink text-white px-2 py-1 rounded text-xs">Plotly</span>
+            <span class="bg-redOrange text-white px-2 py-1 rounded text-xs ml-1">Dash</span>
+          </div>
+        </div>
+        <div class="bg-slateDark p-6 rounded-xl shadow-lg hover:shadow-neonPink/50 hover:-translate-y-1 transition flex flex-col card-short">
+          <h3 class="text-xl text-white font-semibold flex items-center mb-2"><i class="fas fa-broom mr-2 text-redOrange"></i>Data Cleaning Pipeline</h3>
+          <p class="text-slate-300 mb-4">Automated ETL pipeline for healthcare datasets using Python & Pandas. <span class="italic text-slate-400">[Add your project details here]</span></p>
+          <div class="mt-auto">
+            <span class="bg-redOrange text-white px-2 py-1 rounded text-xs">Python</span>
+            <span class="bg-neonPink text-white px-2 py-1 rounded text-xs ml-1">Pandas</span>
+          </div>
+        </div>
+        <div class="bg-slateDark p-6 rounded-xl shadow-lg hover:shadow-neonPink/50 hover:-translate-y-1 transition flex flex-col card-short">
+          <h3 class="text-xl text-white font-semibold flex items-center mb-2"><i class="fas fa-robot mr-2 text-neonPink"></i>AI Readmission Predictor</h3>
+          <p class="text-slate-300 mb-4">ML model to predict patient readmission risk and optimize care. <span class="italic text-slate-400">[Add your project details here]</span></p>
+          <div class="mt-auto">
+            <span class="bg-neonPink text-white px-2 py-1 rounded text-xs">Scikit-learn</span>
+            <span class="bg-redOrange text-white px-2 py-1 rounded text-xs ml-1">Healthcare</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights -->
+    <section id="insights" class="max-w-6xl mx-auto px-4 mb-24" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold text-white mb-8">Insights</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="bg-slateDark p-6 rounded-xl shadow-lg flex flex-col card-short">
+          <h3 class="text-lg text-white font-semibold mb-2"><i class="fas fa-heartbeat mr-2 text-neonPink"></i>AI in African Healthcare</h3>
+          <p class="text-slate-300 mb-2">Exploring the impact of AI on patient care and access in Africa. <span class="italic text-slate-400">[Add your insight here]</span></p>
+          <a href="#" class="inline-block mt-auto text-neonPink hover:underline">Read more →</a>
+        </div>
+        <div class="bg-slateDark p-6 rounded-xl shadow-lg flex flex-col card-short">
+          <h3 class="text-lg text-white font-semibold mb-2"><i class="fas fa-balance-scale mr-2 text-redOrange"></i>Ethics in Data Science</h3>
+          <p class="text-slate-300 mb-2">Why responsible AI matters for healthcare and education. <span class="italic text-slate-400">[Add your insight here]</span></p>
+          <a href="#" class="inline-block mt-auto text-neonPink hover:underline">Read more →</a>
+        </div>
+        <div class="bg-slateDark p-6 rounded-xl shadow-lg flex flex-col card-short">
+          <h3 class="text-lg text-white font-semibold mb-2"><i class="fas fa-chart-area mr-2 text-calmTeal"></i>Visualizing Impact</h3>
+          <p class="text-slate-300 mb-2">Best practices for communicating insights to non-technical leaders. <span class="italic text-slate-400">[Add your insight here]</span></p>
+          <a href="#" class="inline-block mt-auto text-neonPink hover:underline">Read more →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (smaller, same style as projects, aligned) -->
+    <section id="recommendations" class="max-w-6xl mx-auto px-4 mb-28" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold text-white mb-8">Testimonials</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="bg-slateDark p-5 rounded-xl shadow-lg flex flex-col testimonial-card">
+          <span class="flex items-center mb-2"><i class="fas fa-quote-left text-neonPink mr-2"></i>
+          “Azzam’s data insights helped us improve patient outcomes and efficiency.”</span>
+          <div class="mt-auto font-bold text-neonPink self-end">— Dr. Jane Doe, Hospital Director</div>
+        </div>
+        <div class="bg-slateDark p-5 rounded-xl shadow-lg flex flex-col testimonial-card">
+          <span class="flex items-center mb-2"><i class="fas fa-quote-left text-redOrange mr-2"></i>
+          “His dashboards made our NGO’s impact visible and actionable.”</span>
+          <div class="mt-auto font-bold text-redOrange self-end">— John Smith, NGO Lead</div>
+        </div>
+        <div class="bg-slateDark p-5 rounded-xl shadow-lg flex flex-col testimonial-card">
+          <span class="flex items-center mb-2"><i class="fas fa-quote-left text-calmTeal mr-2"></i>
+          “Azzam is a true data-for-good leader.”</span>
+          <div class="mt-auto font-bold text-calmTeal self-end">— Sarah Lee, Tech Community</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="max-w-lg mx-auto px-4 mb-28" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold text-white mb-8">Contact Me</h2>
+      <form class="flex flex-col gap-4">
+        <input class="w-full bg-slateDark text-white p-3 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-neonPink transition" placeholder="Your Name" required>
+        <input class="w-full bg-slateDark text-white p-3 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-neonPink transition" placeholder="Your Email" type="email" required>
+        <textarea class="w-full bg-slateDark text-white p-3 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-neonPink transition" placeholder="Your Message" required></textarea>
+        <button type="submit" class="bg-gradient-to-r from-neonPink to-redOrange text-white font-bold py-2 px-4 rounded hover:scale-105 transition">Send Message</button>
+      </form>
+      <div class="flex gap-4 justify-center mt-6">
+        <a href="#" class="text-white hover:text-neonPink transition text-2xl"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-white hover:text-redOrange transition text-2xl"><i class="fab fa-github"></i></a>
+        <a href="mailto:azzom.muhamed@gmail.com" class="text-white hover:text-neonPink transition text-2xl"><i class="fas fa-envelope"></i></a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-bg text-slate-400 text-center py-10 text-sm w-full">
+    &copy; 2025 Azzam. Data for Good. All rights reserved.
+  </footer>
+
+  <script>
+    AOS.init({ once: true, duration: 800 });
+  </script>
+  <style>
+    /* Modern slow spin for DNA icon in header */
+    .animate-spin-slow {
+      animation: spin 3.5s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+  </style>
+</body>
+</html>
